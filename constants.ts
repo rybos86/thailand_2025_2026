@@ -1268,7 +1268,7 @@ export const ITINERARY_DATA: TripLeg[] = [
       mapLink: 'https://maps.app.goo.gl/sfMKs87pzoythyw37',
     },
     description: 'Prvá zastávka: Relax pri bazéne a aklimatizácia.',
-    imagePlaceholder: 'https://picsum.photos/800/400?random=1',
+    imagePlaceholder: 'https://www.luxuryvillasamui.com/wp-content/uploads/2022/07/Koh-Nang-Yuan-sand-bar-Thailand.jpg',
     mdFileName: 'koh-samui-lamai.md',
     contentMarkdown: LAMAI_CONTENT,
     transportTo: [
@@ -1290,7 +1290,7 @@ export const ITINERARY_DATA: TripLeg[] = [
       mapLink: 'https://maps.app.goo.gl/zkEPaf1JygUD3Nd99',
     },
     description: 'Potápanie, šnorchlovanie a krásne pláže.',
-    imagePlaceholder: 'https://picsum.photos/800/400?random=2',
+    imagePlaceholder: 'https://www.thefunkyturtle.com/wp-content/uploads/2019/10/thefunkyturtle.com-koh-tao-thailand--951x420.jpg',
     mdFileName: 'koh-tao.md',
     contentMarkdown: KOH_TAO_CONTENT,
     transportTo: [
@@ -1314,7 +1314,7 @@ export const ITINERARY_DATA: TripLeg[] = [
       mapLink: 'https://maps.app.goo.gl/rfX1x6CWc3KazcRs5',
     },
     description: 'Severná časť ostrova, kľudnejšia atmosféra, nádherné západy slnka.',
-    imagePlaceholder: 'https://picsum.photos/800/400?random=3',
+    imagePlaceholder: 'https://paradiseislandestate.com/wp-content/uploads/2024/07/Jungle-Club-samui-1024x576.jpg',
     mdFileName: 'koh-samui-maenam.md',
     contentMarkdown: MAENAM_CONTENT,
     transportTo: [
@@ -1338,7 +1338,7 @@ export const ITINERARY_DATA: TripLeg[] = [
       mapLink: 'https://maps.app.goo.gl/8Ug4PKwkJfLw2GVi7',
     },
     description: 'Nový rok v metropole. Mestská doprava a street food.',
-    imagePlaceholder: 'https://picsum.photos/800/400?random=4',
+    imagePlaceholder: 'https://content.r9cdn.net/rimg/dimg/1a/a1/d81ae456-hood-209082-166c1672379.jpg?width=1366&height=768&xhint=1483&yhint=1208&crop=true',
     mdFileName: 'bangkok-silom.md',
     contentMarkdown: SILOM_CONTENT,
     transportTo: [
@@ -1366,7 +1366,7 @@ export const ITINERARY_DATA: TripLeg[] = [
       mapLink: 'https://maps.app.goo.gl/7gTkfQKBEHsMr9Rc9',
     },
     description: 'Oddych pri mori kúsok od rušného mesta.',
-    imagePlaceholder: 'https://picsum.photos/800/400?random=5',
+    imagePlaceholder: 'https://res.klook.com/image/upload/fl_lossy.progressive,q_60/cities/ipm3veqpg9hp61dxamou.jpg',
     mdFileName: 'pattaya-bang-sarey.md',
     contentMarkdown: PATTAYA_CONTENT,
     transportTo: [
@@ -1388,7 +1388,7 @@ export const ITINERARY_DATA: TripLeg[] = [
       mapLink: 'https://maps.app.goo.gl/rbreLehGdAqmPTKf6',
     },
     description: 'Príprava na odlet domov.',
-    imagePlaceholder: 'https://picsum.photos/800/400?random=6',
+    imagePlaceholder: 'https://content.r9cdn.net/rimg/dimg/1a/a1/d81ae456-hood-209082-166c1672379.jpg?width=1366&height=768&xhint=1483&yhint=1208&crop=true',
     mdFileName: 'bangkok-airport.md',
     contentMarkdown: BANGKOK_AIRPORT_CONTENT,
     transportTo: [
