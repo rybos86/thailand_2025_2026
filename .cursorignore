@@ -1,0 +1,11 @@
+# Environment files with sensitive data
+.env
+.env.local
+.env*.local
+
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+dist-ssr/
