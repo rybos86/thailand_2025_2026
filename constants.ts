@@ -1265,6 +1265,7 @@ export const ITINERARY_DATA: TripLeg[] = [
     accommodation: {
       name: 'Holiday house near Lamai',
       address: '2/4 Proo Na Mueang Rd, Tambon Na Mueang',
+      mapLink: 'https://maps.app.goo.gl/sfMKs87pzoythyw37',
     },
     description: 'Prvá zastávka: Relax pri bazéne a aklimatizácia.',
     imagePlaceholder: 'https://picsum.photos/800/400?random=1',
@@ -1286,6 +1287,7 @@ export const ITINERARY_DATA: TripLeg[] = [
     accommodation: {
       name: 'Asia Divers Resort',
       address: '3RXJ+PQG Village Sairee Rd, Tambon Ko Tao',
+      mapLink: 'https://maps.app.goo.gl/zkEPaf1JygUD3Nd99',
     },
     description: 'Potápanie, šnorchlovanie a krásne pláže.',
     imagePlaceholder: 'https://picsum.photos/800/400?random=2',
@@ -1309,6 +1311,7 @@ export const ITINERARY_DATA: TripLeg[] = [
     accommodation: {
       name: 'Palmgarden Resort Samui',
       address: 'Maenam, Ko Samui District (Adults Only)',
+      mapLink: 'https://maps.app.goo.gl/rfX1x6CWc3KazcRs5',
     },
     description: 'Severná časť ostrova, kľudnejšia atmosféra, nádherné západy slnka.',
     imagePlaceholder: 'https://picsum.photos/800/400?random=3',
@@ -1332,6 +1335,7 @@ export const ITINERARY_DATA: TripLeg[] = [
     accommodation: {
       name: 'Pas Cher Hotel de Bangkok',
       address: '28/5 Thanon Charoen Wiang, Si Lom, Bang Rak',
+      mapLink: 'https://maps.app.goo.gl/8Ug4PKwkJfLw2GVi7',
     },
     description: 'Nový rok v metropole. Mestská doprava a street food.',
     imagePlaceholder: 'https://picsum.photos/800/400?random=4',
@@ -1359,6 +1363,7 @@ export const ITINERARY_DATA: TripLeg[] = [
     accommodation: {
       name: 'Baan Bangsarey Hotels',
       address: '64 19, Bang Sare, Sattahip District',
+      mapLink: 'https://maps.app.goo.gl/7gTkfQKBEHsMr9Rc9',
     },
     description: 'Oddych pri mori kúsok od rušného mesta.',
     imagePlaceholder: 'https://picsum.photos/800/400?random=5',
@@ -1380,6 +1385,7 @@ export const ITINERARY_DATA: TripLeg[] = [
     accommodation: {
       name: 'Suvarnabhumi Ville Airport Hotel',
       address: '9 9 King Kaeo Rd, Racha Thewa, Bang Phli District',
+      mapLink: 'https://maps.app.goo.gl/rbreLehGdAqmPTKf6',
     },
     description: 'Príprava na odlet domov.',
     imagePlaceholder: 'https://picsum.photos/800/400?random=6',

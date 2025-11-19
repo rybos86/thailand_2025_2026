@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(python generate_pdf.py:*)",
+      "Bash(python generate_pptx.py:*)",
+      "Bash(python generate_modern_pdf.py:*)",
+      "Bash(python generate_template_pdf.py:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

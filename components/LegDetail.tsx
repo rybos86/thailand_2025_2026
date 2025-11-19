@@ -98,9 +98,9 @@ export const LegDetail: React.FC<Props> = ({ leg, index, isLast }) => {
                     </div>
                   </div>
 
-                  <a 
-                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(leg.accommodation.name + ' ' + leg.accommodation.address)}`}
-                    target="_blank" 
+                  <a
+                    href={leg.accommodation.mapLink || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(leg.accommodation.name + ' ' + leg.accommodation.address)}`}
+                    target="_blank"
                     rel="noreferrer"
                     className="inline-flex items-center justify-center w-full py-2 px-4 bg-white text-thailand-600 border border-thailand-200 rounded-lg text-sm font-medium hover:bg-thailand-50 hover:border-thailand-300 transition-all shadow-sm group/link"
                   >
