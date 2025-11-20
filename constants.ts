@@ -1274,7 +1274,7 @@ export const ITINERARY_DATA: TripLeg[] = [
     transportTo: [
       {
         type: 'combination',
-        details: 'Prílet do Surat Thani (08:55), potom Bus + Speed Boat na Samui (11:00 - 14:00). Prístav Pralarn Pier.'
+        details: 'Odlet z Viedne 15.12.2025 10:00. Prílet do Surat Thani 16.12.2025 08:55, potom Bus + Speed Boat na Samui (11:00 - 14:00). Prístav Pralarn Pier.'
       }
     ]
   },

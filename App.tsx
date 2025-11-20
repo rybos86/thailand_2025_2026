@@ -5,6 +5,33 @@ import { LegDetail } from './components/LegDetail';
 
 const App: React.FC = () => {
   const [activeLegId, setActiveLegId] = useState(ITINERARY_DATA[0].id);
+  const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+  // Countdown to departure
+  useEffect(() => {
+    const departureDate = new Date('2025-12-15T10:00:00').getTime();
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = departureDate - now;
+
+      if (distance > 0) {
+        setCountdown({
+          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((distance % (1000 * 60)) / 1000)
+        });
+      } else {
+        setCountdown({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      }
+    };
+
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   // Simple scroll spy to update the active bubble in the header
   useEffect(() => {
@@ -47,26 +74,22 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans">
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-sm border-b border-slate-200 sticky top-0 z-50 shadow-sm">
-        <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+        <div className="max-w-5xl mx-auto px-4 py-4">
           <div>
             <h1 className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-thailand-500 to-thailand-700">
               Thajsko 2025/26
             </h1>
-            <p className="text-xs text-slate-500 font-medium">16. Dec - 9. Jan (24 dní)</p>
-          </div>
-          <div className="text-right hidden sm:block bg-slate-50 px-3 py-1 rounded-lg border border-slate-100">
-             <div className="text-xs font-bold text-slate-700 uppercase tracking-wide">Odlet Domov</div>
-             <div className="text-xs text-slate-500 font-mono">{FLIGHT_HOME.date} • {FLIGHT_HOME.duration}</div>
+            <p className="text-xs text-slate-500 font-medium">15. Dec - 9. Jan (25 dní)</p>
           </div>
         </div>
-        
+
         {/* Navigation Bar (Mini Map) */}
         <div className="border-t border-slate-100 bg-white">
           <div className="max-w-5xl mx-auto">
-             <Timeline 
-                legs={ITINERARY_DATA} 
-                selectedId={activeLegId} 
-                onSelect={handleScrollTo} 
+             <Timeline
+                legs={ITINERARY_DATA}
+                selectedId={activeLegId}
+                onSelect={handleScrollTo}
              />
           </div>
         </div>
@@ -74,6 +97,34 @@ const App: React.FC = () => {
 
       {/* Main Content Timeline */}
       <main className="py-8 md:py-12 px-2 md:px-4 max-w-5xl mx-auto">
+
+        {/* Countdown Section */}
+        <div className="mb-8 md:mb-12">
+          <div className="bg-gradient-to-r from-thailand-50 to-amber-50 rounded-2xl p-6 md:p-8 border border-thailand-100 shadow-sm">
+            <div className="flex flex-col items-center gap-3">
+              <h2 className="text-sm md:text-base font-bold text-thailand-700 uppercase tracking-wider">✈️ Odpočet do odletu</h2>
+              <div className="flex gap-3 md:gap-6">
+                <div className="flex flex-col items-center bg-white rounded-xl px-4 py-3 shadow-md min-w-[70px] md:min-w-[90px]">
+                  <span className="text-3xl md:text-4xl font-bold text-thailand-600">{countdown.days}</span>
+                  <span className="text-xs md:text-sm text-slate-600 font-semibold uppercase mt-1">dní</span>
+                </div>
+                <div className="flex flex-col items-center bg-white rounded-xl px-4 py-3 shadow-md min-w-[70px] md:min-w-[90px]">
+                  <span className="text-3xl md:text-4xl font-bold text-thailand-600">{countdown.hours}</span>
+                  <span className="text-xs md:text-sm text-slate-600 font-semibold uppercase mt-1">hodín</span>
+                </div>
+                <div className="flex flex-col items-center bg-white rounded-xl px-4 py-3 shadow-md min-w-[70px] md:min-w-[90px]">
+                  <span className="text-3xl md:text-4xl font-bold text-thailand-600">{countdown.minutes}</span>
+                  <span className="text-xs md:text-sm text-slate-600 font-semibold uppercase mt-1">minút</span>
+                </div>
+                <div className="flex flex-col items-center bg-white rounded-xl px-4 py-3 shadow-md min-w-[70px] md:min-w-[90px]">
+                  <span className="text-3xl md:text-4xl font-bold text-thailand-600">{countdown.seconds}</span>
+                  <span className="text-xs md:text-sm text-slate-600 font-semibold uppercase mt-1">sekúnd</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="space-y-0">
           {ITINERARY_DATA.map((leg, index) => (
             <LegDetail 
@@ -87,7 +138,7 @@ const App: React.FC = () => {
         
         {/* Final Departure Card */}
         <div className="flex gap-4 md:gap-8 relative opacity-70 hover:opacity-100 transition-opacity">
-           <div className="flex flex-col items-center flex-shrink-0 w-10 md:w-14">
+           <div className="flex flex-col items-center flex-shrink-0 w-10 md:w-14 hidden md:flex">
               <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-slate-800 flex items-center justify-center text-white text-sm font-bold z-10">
                  ✈
               </div>

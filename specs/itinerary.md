@@ -1,6 +1,6 @@
 # Thajská Dovolenka 2025/2026
 
-**Trvanie:** 16. december 2025 - 9. január 2026 (24 dní)
+**Trvanie:** 15. december 2025 - 9. január 2026 (25 dní)
 
 **Typ dovolenky:** Oddych, more, ľahká zábava, spoznávanie okolia
 
@@ -46,8 +46,9 @@
 
 ## Presuny
 
-### Prílet do Thajska (16.12)
-- Let do Surat Thani: prílet 08:55
+### Odlet z Viedne a prílet do Thajska (15.12 - 16.12)
+- Odlet z Viedne: 15.12.2025 10:00
+- Let do Surat Thani: prílet 16.12.2025 08:55
 - Bus + Speed Boat do Koh Samui: 11:00 - 14:00 (3h)
 - Prístav: Pralarn Pier (Maenam Pier)
 
