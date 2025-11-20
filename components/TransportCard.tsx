@@ -16,18 +16,18 @@ export const TransportCard: React.FC<{ transports: Transport[] }> = ({ transport
   if (!transports || transports.length === 0) return null;
 
   return (
-    <div className="bg-slate-50 border-l-4 border-amber-400 p-4 rounded-r-lg mb-6">
-      <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-3">Príchod / Transfer</h3>
+    <div className="bg-slate-50 dark:bg-slate-900 border-l-4 border-amber-400 dark:border-amber-500 p-4 rounded-r-lg mb-6">
+      <h3 className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">Príchod / Transfer</h3>
       <div className="space-y-3">
         {transports.map((t, idx) => (
-          <div key={idx} className="flex items-start space-x-3 text-slate-700">
-            <div className="mt-1 text-amber-500">
+          <div key={idx} className="flex items-start space-x-3 text-slate-700 dark:text-slate-300">
+            <div className="mt-1 text-amber-500 dark:text-amber-400">
                {t.type === 'flight' ? <PlaneIcon /> : t.type === 'boat' ? <BoatIcon /> : <BusIcon />}
             </div>
             <div>
               <div className="font-medium">{t.details}</div>
               {(t.departureTime || t.arrivalTime) && (
-                <div className="text-sm text-slate-500">
+                <div className="text-sm text-slate-500 dark:text-slate-400">
                   {t.departureTime && <span>Odchod: {t.departureTime}</span>}
                   {t.departureTime && t.arrivalTime && <span className="mx-2">•</span>}
                   {t.arrivalTime && <span>Príchod: {t.arrivalTime}</span>}

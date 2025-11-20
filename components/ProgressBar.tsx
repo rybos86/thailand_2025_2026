@@ -22,9 +22,9 @@ export const ProgressBar: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 w-full h-1.5 bg-slate-200/80 z-[100]">
+    <div className="fixed top-0 left-0 w-full h-1.5 bg-slate-200/80 dark:bg-slate-700/80 z-[100]">
       <div
-        className="h-full bg-gradient-to-r from-thailand-500 to-thailand-700 shadow-sm"
+        className="h-full bg-gradient-to-r from-thailand-500 to-thailand-700 dark:from-thailand-600 dark:to-thailand-800 shadow-sm"
         style={{ width: `${scrollProgress}%` }}
       />
     </div>

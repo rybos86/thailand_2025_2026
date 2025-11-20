@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-family-sans: 'Inter', sans-serif;
+
+  --color-thailand-50: #f0f9ff;
+  --color-thailand-100: #e0f2fe;
+  --color-thailand-200: #bae6fd;
+  --color-thailand-300: #7dd3fc;
+  --color-thailand-400: #38bdf8;
+  --color-thailand-500: #0ea5e9;
+  --color-thailand-600: #0284c7;
+  --color-thailand-700: #0369a1;
+  --color-thailand-800: #075985;
+  --color-thailand-900: #0c4a6e;
+
+  --color-sand-100: #fef3c7;
+  --color-sand-200: #fde68a;
+  --color-sand-800: #92400e;
+}
+
+:root {
+  color-scheme: light;
+}
+
+:root.dark {
+  color-scheme: dark;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: rgb(248 250 252);
+  color: rgb(15 23 42);
+}
+
+.dark body {
+  background-color: rgb(15 23 42);
+  color: rgb(248 250 252);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

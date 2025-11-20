@@ -79,7 +79,7 @@ export const Checklist: React.FC = () => {
       {/* Floating Checklist Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-24 right-6 z-50 bg-amber-600 hover:bg-amber-700 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
+        className="fixed bottom-24 right-6 z-50 bg-amber-600 dark:bg-amber-700 hover:bg-amber-700 dark:hover:bg-amber-600 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
         aria-label="Checklist"
       >
         <span className="text-2xl">✓</span>
@@ -95,7 +95,7 @@ export const Checklist: React.FC = () => {
           />
 
           {/* Panel */}
-          <div className="fixed bottom-40 right-6 z-50 bg-white rounded-2xl shadow-2xl w-96 max-h-[600px] flex flex-col border-2 border-amber-200">
+          <div className="fixed bottom-40 right-6 z-50 bg-white dark:bg-slate-800 rounded-2xl shadow-2xl w-96 max-h-[600px] flex flex-col border-2 border-amber-200 dark:border-amber-700">
             {/* Header */}
             <div className="sticky top-0 bg-amber-600 text-white p-4 rounded-t-2xl">
               <div className="flex items-center justify-between mb-3">
@@ -142,13 +142,13 @@ export const Checklist: React.FC = () => {
             <div className="p-4 overflow-y-auto flex-grow">
               {/* Progress Bar */}
               <div className="mb-4">
-                <div className="flex justify-between text-xs text-slate-600 mb-1">
+                <div className="flex justify-between text-xs text-slate-600 dark:text-slate-400 mb-1">
                   <span>Progress</span>
                   <span className="font-semibold">
                     {activeTab === 'preTrip' ? preTripProgress : packingProgress}%
                   </span>
                 </div>
-                <div className="h-2 bg-slate-200 rounded-full overflow-hidden">
+                <div className="h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
                   <div
                     className="h-full bg-gradient-to-r from-amber-500 to-amber-600 transition-all duration-300"
                     style={{
@@ -165,8 +165,8 @@ export const Checklist: React.FC = () => {
                     key={item.id}
                     className={`flex items-start gap-3 p-3 rounded-lg border transition-colors cursor-pointer ${
                       item.checked
-                        ? 'bg-green-50 border-green-200'
-                        : 'bg-slate-50 border-slate-200 hover:bg-slate-100'
+                        ? 'bg-green-50 dark:bg-green-900/30 border-green-200 dark:border-green-800'
+                        : 'bg-slate-50 dark:bg-slate-700 border-slate-200 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-600'
                     }`}
                   >
                     <input
@@ -178,8 +178,8 @@ export const Checklist: React.FC = () => {
                     <span
                       className={`text-sm flex-grow ${
                         item.checked
-                          ? 'text-green-700 line-through'
-                          : 'text-slate-700'
+                          ? 'text-green-700 dark:text-green-400 line-through'
+                          : 'text-slate-700 dark:text-slate-300'
                       }`}
                     >
                       {item.text}
@@ -190,8 +190,8 @@ export const Checklist: React.FC = () => {
             </div>
 
             {/* Footer */}
-            <div className="p-4 bg-slate-50 border-t border-slate-200 rounded-b-2xl">
-              <div className="text-xs text-slate-600 text-center">
+            <div className="p-4 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-700 rounded-b-2xl">
+              <div className="text-xs text-slate-600 dark:text-slate-400 text-center">
                 {activeTab === 'preTrip'
                   ? `${checklistData.preTrip.filter((i) => i.checked).length} / ${checklistData.preTrip.length} úloh hotových`
                   : `${checklistData.packing.filter((i) => i.checked).length} / ${checklistData.packing.length} položiek zbalených`}
