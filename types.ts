@@ -17,6 +17,9 @@ export interface TripLeg {
     name: string;
     address: string;
     mapLink?: string;
+    phone?: string;
+    checkIn?: string;
+    checkOut?: string;
   };
   transportTo?: Transport[];
   description: string;

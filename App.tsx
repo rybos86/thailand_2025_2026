@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { ITINERARY_DATA, FLIGHT_HOME } from './constants';
 import { Timeline } from './components/Timeline';
 import { LegDetail } from './components/LegDetail';
+import { EmergencyPanel } from './components/EmergencyPanel';
+import { BackToTop } from './components/BackToTop';
+import { ProgressBar } from './components/ProgressBar';
+import { Checklist } from './components/Checklist';
 
 const App: React.FC = () => {
   const [activeLegId, setActiveLegId] = useState(ITINERARY_DATA[0].id);
@@ -72,6 +76,9 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans">
+      {/* Progress Bar */}
+      <ProgressBar />
+
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-sm border-b border-slate-200 sticky top-0 z-50 shadow-sm">
         <div className="max-w-5xl mx-auto px-4 py-4">
@@ -162,6 +169,11 @@ const App: React.FC = () => {
           Itinerár je uložený lokálne. Pre generovanie tipov na aktivity je využívaný Google Gemini API.
         </p>
       </footer>
+
+      {/* Floating Action Buttons */}
+      <BackToTop />
+      <Checklist />
+      <EmergencyPanel />
     </div>
   );
 };
